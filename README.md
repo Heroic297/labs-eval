@@ -17,7 +17,7 @@ Author: Owen Gidusko (WVU Biomedical Engineering).
   Some tiers are judgment calls (lifter CK, hemolyzed K, EDTA contamination, TG >1,000).
 - **The LLM grader is not yet human-validated.** `results/human_check_sample.csv` holds 20 fixed cases per model with blank
   `rater_` columns for a human check of the grader.
-- **v1 traps are too easy for frontier models.** All six frontier models failed 0 of 47 trap cases, so v1 separates small from frontier
+- **v1 traps are too easy for frontier models.** Six of seven frontier models failed 0 of 47 trap cases (DeepSeek V4.1 Flash failed 1), so v1 separates small from frontier
   models but cannot rank frontier models. v2 is planned with messier inputs (OCR scans, missing ranges, trends across visits).
 
 ## Results summary (2026-10-17)
@@ -31,14 +31,17 @@ Author: Owen Gidusko (WVU Biomedical Engineering).
 | DeepSeek V4 Pro | 86.2% [79.2, 91.1] | 0.0% [0.0, 8.4] | 35/35 | 0.0% [0.0, 22.8] | 99.2% [95.8, 99.9] | 0.0% [0.0, 2.9] | 7.75 [7.65, 7.85] | $0.48 |
 | GPT-6 Astra | 86.2% [79.2, 91.1] | 0.0% [0.0, 8.4] | 35/35 | 0.0% [0.0, 22.8] | 100.0% [97.1, 100.0] | 0.0% [0.0, 2.9] | 7.56 [7.44, 7.67] | $2.35 |
 | GPT-6.1 Sol | 84.6% [77.4, 89.8] | 2.4% [0.4, 12.3] | 34/35 | 0.0% [0.0, 22.8] | 100.0% [97.1, 100.0] | 0.0% [0.0, 2.9] | 7.62 [7.52, 7.72] | $0.45 |
+| DeepSeek V4.1 Flash | 84.6% [77.4, 89.8] | 2.4% [0.4, 12.3] | 34/35 | 0.0% [0.0, 22.8] | 97.7% [93.4, 99.2] | 0.0% [0.0, 2.9] | 7.78 [7.70, 7.85] | $0.05 |
 | Llama-3.2-3B (Q4_K_M, local) | 40.8% [32.7, 49.4] | 90.5% [77.9, 96.2] | 0/35 | 84.6% [57.8, 95.7] | 13.1% [8.3, 19.9] | 0.0% [0.0, 2.9] | 5.02 [4.76, 5.27] | $0 (CPU) |
 | Qwen2.5-1.5B (Q4_K_M, local) | 23.1% [16.7, 31.0] | 90.5% [77.9, 96.2] | 0/35 | 92.3% [66.7, 98.6] | 0.0% [0.0, 2.9] | 0.0% [0.0, 2.9] | 4.42 [4.13, 4.70] | $0 (CPU) |
 
 Frontier models ran through the Nous Portal. Model ids: `anthropic/claude-opus-5.5`, `google/gemini-4-argon` (gemini-4-argon-20261013),
-`x-ai/grok-4.7`, `deepseek/deepseek-v4-pro-0813`, `openai/gpt-6-astra` (gpt-6-astra-20260903), `openai/gpt-6.1-sol` (gpt-6.1-sol-20260929).
+`x-ai/grok-4.7`, `deepseek/deepseek-v4-pro-0813`, `openai/gpt-6-astra` (gpt-6-astra-20260903), `openai/gpt-6.1-sol` (gpt-6.1-sol-20260929),
+`deepseek/deepseek-v4.1-flash-1017` (DeepSeek V4.1 Flash, deepseek-v4.1-flash-20261017).
 Explanations were graded by an LLM from a different lab than the model being graded: `openai/gpt-6-luna` for non-OpenAI models,
 `anthropic/claude-haiku-5.5` for OpenAI models. Frontier differences are mostly over-triage (for example a powerlifter's benign
-post-workout CK rated "soon"), not missed emergencies.
+post-workout CK rated "soon"), not missed emergencies: five of seven caught 35/35, and GPT-6.1 Sol and DeepSeek V4.1 Flash
+each rated one emergency "urgent".
 
 ![Headline metrics](figures/headline_metrics.png)
 
@@ -60,7 +63,7 @@ python3 labs_eval/score.py
 python3 labs_eval/judge.py --label claude-opus-5.5
 python3 labs_eval/score.py && python3 labs_eval/report.py
 ```
-Other entry points: `./smoke.sh` and `./run_frontier.sh` (all six frontier models), `./run_local.sh` (small models via a llama.cpp
+Other entry points: `./smoke.sh` and `./run_frontier.sh` (all seven frontier models), `./run_local.sh` (small models via a llama.cpp
 server; set `LLAMA_DIR` and `MODELS_DIR`). Direct provider APIs and local servers are also supported; see `gated_or_missing.md`.
 `score.py` scores every `results/raw_*.jsonl`; `smoke.sh` moves its outputs to `results/smoke/` so they are not scored.
 

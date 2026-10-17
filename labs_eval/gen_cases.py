@@ -191,7 +191,7 @@ def build():
     for i in range(4):
         sex = R.choice("FM"); age = R.randint(40, 68)
         add("type2_diabetes_range", age, sex, "Routine labs; BMI 33.", ["BMP", "A1c"],
-            {"Hemoglobin A1c": u(7.0, 8.8), "Glucose (fasting)": u(140, 190, 0)}, [["diabetes"]],
+            {"Hemoglobin A1c": u(7.0, 8.8), "Glucose (fasting)": u(140, 190, 0)}, [["diabet"]],
             "A1c >=6.5% and fasting glucose >=126 mg/dL: diabetes range (ADA).", "soon", [["diabetes", "blood sugar"]], ["ABIM2026", "ADA2026"])
     for i in range(4):
         sex = R.choice("FM"); age = R.randint(30, 60)
@@ -289,7 +289,7 @@ def build():
     for i in range(3):
         sex = R.choice("FM"); age = R.randint(40, 70)
         add("unit_si_diabetes", age, sex, "Results from a lab in the UK (SI units).", ["BMP"], {"Glucose (fasting)": u(150, 190, 0)},
-            [["diabetes", "high blood sugar", "hyperglycemia"]], "Fasting glucose 8.3-10.5 mmol/L = 150-190 mg/dL: diabetes range.", "soon",
+            [["diabet", "high blood sugar", "hyperglycemia"]], "Fasting glucose 8.3-10.5 mmol/L = 150-190 mg/dL: diabetes range.", "soon",
             [["sugar", "glucose", "diabetes"]], ["ABIM2026", "ADA2026", "SI_CONV"], tags=["unit_trap", "trap"],
             si_analytes=["Glucose (fasting)", "Creatinine", "Calcium", "BUN"], trap="Glucose (fasting)")
     for i in range(3):

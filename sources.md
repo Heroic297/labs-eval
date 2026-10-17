@@ -36,3 +36,5 @@ This is compatible with the sources above because no source text, tables, or fig
 ranges and clinical thresholds, which are facts, together with citations. Sources under CC BY-NC-ND (StatPearls) were read for
 facts only; nothing from them is redistributed or adapted. The ABIM PDF and its text extraction (`sources/*.pdf`, `sources/abim.txt`)
 are git-ignored and not redistributed; fetch the PDF from the URL above to audit the ranges.
+
+When DeepSeek V4.1 Flash was added (2026-10-17), the interpretation keyword for the diabetes-range groups was widened from "diabetes" to the prefix "diabet" so that "diabetic range" is accepted. Cases are unchanged and no other model's scores changed. See results.md.

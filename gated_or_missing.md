@@ -22,6 +22,7 @@ The LLM grader (`labs_eval/judge.py`) also uses `NOUS_API_KEY`.
 | google/gemini-4-argon | 0.49 |
 | deepseek/deepseek-v4-pro-0813 | 0.48 |
 | openai/gpt-6.1-sol | 0.45 |
+| deepseek/deepseek-v4.1-flash-1017 | 0.05 |
 
 LLM grading cost about $0.02-0.03 per model. Prices change; check current pricing before running.
 
