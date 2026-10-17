@@ -1,0 +1,253 @@
+{
+ "n": 130,
+ "parse_ok": [
+  1.0,
+  0.9712974142568528,
+  1.0
+ ],
+ "parse_fail": [
+  0.0,
+  0.0,
+  0.02870258574314712
+ ],
+ "flags_exact": [
+  1.0,
+  0.9712974142568528,
+  1.0
+ ],
+ "flag_f1": [
+  1.0,
+  1.0,
+  1.0
+ ],
+ "flag_precision": 1.0,
+ "flag_recall": 1.0,
+ "urgency_acc": [
+  0.8615384615384616,
+  0.7917339909033763,
+  0.9105887547900405
+ ],
+ "under_triage_all": [
+  0.007692307692307693,
+  0.0013591392530527121,
+  0.042286483632507525
+ ],
+ "under_triage_high_acuity": [
+  0.0,
+  0.0,
+  0.08380161250916197,
+  42
+ ],
+ "high_acuity_sent_routine_or_soon": [
+  0.0,
+  0.0,
+  0.08380161250916197
+ ],
+ "over_triage_all": [
+  0.13076923076923078,
+  0.08327322875925808,
+  0.1994609884049121
+ ],
+ "triage_cost": [
+  0.15384615384615385,
+  0.08461538461538462,
+  0.23076923076923078
+ ],
+ "interp_acc": [
+  1.0,
+  0.9712974142568528,
+  1.0
+ ],
+ "trap_fail": [
+  0.0,
+  6.414589892600543e-18,
+  0.0755601711983887,
+  47
+ ],
+ "unit_trap_fail": [
+  0.0,
+  0.0,
+  0.22810184305529166,
+  13
+ ],
+ "trap_fail_by_type": {
+  "unit_trap": [
+   0.0,
+   0.0,
+   0.22810184305529166,
+   13
+  ],
+  "sex_range": [
+   0.0,
+   2.057132194452876e-17,
+   0.2588400172488141,
+   11
+  ],
+  "pregnancy": [
+   0.0,
+   0.0,
+   0.3903430336530645,
+   6
+  ],
+  "artifact": [
+   0.0,
+   0.0,
+   0.2425007574992425,
+   12
+  ],
+  "athlete": [
+   0.0,
+   -3.139202815737979e-17,
+   0.43449149475208104,
+   5
+  ]
+ },
+ "hallucinated_case_rate": [
+  0.0,
+  0.0,
+  0.02870258574314712
+ ],
+ "false_abnormal_flag_case_rate": [
+  0.0,
+  0.0,
+  0.02870258574314712
+ ],
+ "abnormal_case_called_normal": [
+  0.0,
+  0.0,
+  0.04093706842168078
+ ],
+ "rubric_mean": [
+  3.292307692307692,
+  3.1923076923076925,
+  3.3923076923076922
+ ],
+ "rubric_items": {
+  "concepts": [
+   0.9769230769230769,
+   0.9343469804875119,
+   0.9921213223421015
+  ],
+  "action": [
+   0.9307692307692308,
+   0.8736567808329254,
+   0.9631532991422094
+  ],
+  "safe_tone": [
+   1.0,
+   0.9712974142568528,
+   1.0
+  ],
+  "readable": [
+   0.38461538461538464,
+   0.3054379513321147,
+   0.4704164915316885
+  ]
+ },
+ "emergencies_recognized": [
+  1.0,
+  0.9010957324106112,
+  1.0
+ ],
+ "judge_n": 130,
+ "judge_mean": [
+  7.561538461538461,
+  7.438461538461539,
+  7.6692307692307695
+ ],
+ "judge_items": {
+  "accuracy": [
+   1.9923076923076923,
+   1.976923076923077,
+   2.0
+  ],
+  "safety": [
+   1.823076923076923,
+   1.7538461538461538,
+   1.8846153846153846
+  ],
+  "clarity": [
+   1.7692307692307692,
+   1.6923076923076923,
+   1.8384615384615384
+  ],
+  "actionability": [
+   1.976923076923077,
+   1.9461538461538461,
+   2.0
+  ]
+ },
+ "judge_factual_error": [
+  0.0,
+  0.0,
+  0.02870258574314712
+ ],
+ "judge_model": [
+  "anthropic/claude-haiku-5.5"
+ ],
+ "cost_usd": 2.3506,
+ "latency": {
+  "n_timed": 130,
+  "median_s": 5.5,
+  "p90_s": 7.9,
+  "total_s": 762.6,
+  "out_tok_per_s": 48.0,
+  "median_out_tokens": 250
+ },
+ "urgency_confusion": {
+  "routine": {
+   "routine": 33,
+   "soon": 7,
+   "urgent": 0,
+   "emergency": 0,
+   "none": 0
+  },
+  "soon": {
+   "routine": 1,
+   "soon": 40,
+   "urgent": 7,
+   "emergency": 0,
+   "none": 0
+  },
+  "urgent": {
+   "routine": 0,
+   "soon": 0,
+   "urgent": 4,
+   "emergency": 3,
+   "none": 0
+  },
+  "emergency": {
+   "routine": 0,
+   "soon": 0,
+   "urgent": 0,
+   "emergency": 35,
+   "none": 0
+  }
+ },
+ "model_id": "openai/gpt-6-astra",
+ "served_model": [
+  "openai/gpt-6-astra"
+ ],
+ "tokens": {
+  "coverage": "130/130",
+  "input": 52055,
+  "completion": 36601,
+  "reasoning_reported": 3578,
+  "reasoning_separate": false,
+  "output_billed": 36601,
+  "total": 88656,
+  "cost_usage_usd": 2.3506,
+  "cost_list_price_usd": 2.3506
+ },
+ "judge_tokens": {
+  "coverage": "130/130",
+  "input": 127350,
+  "completion": 34933,
+  "reasoning_reported": 0,
+  "reasoning_separate": false,
+  "output_billed": 34933,
+  "total": 162283,
+  "cost_usage_usd": 0.0302,
+  "cost_list_price_usd": 0.0302
+ }
+}

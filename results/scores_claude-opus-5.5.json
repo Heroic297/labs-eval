@@ -1,0 +1,253 @@
+{
+ "n": 130,
+ "parse_ok": [
+  1.0,
+  0.9712974142568528,
+  1.0
+ ],
+ "parse_fail": [
+  0.0,
+  0.0,
+  0.02870258574314712
+ ],
+ "flags_exact": [
+  0.9923076923076923,
+  0.9577135163674925,
+  0.9986408607469472
+ ],
+ "flag_f1": [
+  0.9962264150943396,
+  0.987603305785124,
+  1.0
+ ],
+ "flag_precision": 0.9924812030075187,
+ "flag_recall": 1.0,
+ "urgency_acc": [
+  0.9846153846153847,
+  0.9456404572030683,
+  0.9957708827689585
+ ],
+ "under_triage_all": [
+  0.0,
+  0.0,
+  0.02870258574314712
+ ],
+ "under_triage_high_acuity": [
+  0.0,
+  0.0,
+  0.08380161250916197,
+  42
+ ],
+ "high_acuity_sent_routine_or_soon": [
+  0.0,
+  0.0,
+  0.08380161250916197
+ ],
+ "over_triage_all": [
+  0.015384615384615385,
+  0.004229117231041611,
+  0.05435954279693175
+ ],
+ "triage_cost": [
+  0.015384615384615385,
+  0.0,
+  0.038461538461538464
+ ],
+ "interp_acc": [
+  1.0,
+  0.9712974142568528,
+  1.0
+ ],
+ "trap_fail": [
+  0.0,
+  6.414589892600543e-18,
+  0.0755601711983887,
+  47
+ ],
+ "unit_trap_fail": [
+  0.0,
+  0.0,
+  0.22810184305529166,
+  13
+ ],
+ "trap_fail_by_type": {
+  "unit_trap": [
+   0.0,
+   0.0,
+   0.22810184305529166,
+   13
+  ],
+  "sex_range": [
+   0.0,
+   2.057132194452876e-17,
+   0.2588400172488141,
+   11
+  ],
+  "pregnancy": [
+   0.0,
+   0.0,
+   0.3903430336530645,
+   6
+  ],
+  "artifact": [
+   0.0,
+   0.0,
+   0.2425007574992425,
+   12
+  ],
+  "athlete": [
+   0.0,
+   -3.139202815737979e-17,
+   0.43449149475208104,
+   5
+  ]
+ },
+ "hallucinated_case_rate": [
+  0.0,
+  0.0,
+  0.02870258574314712
+ ],
+ "false_abnormal_flag_case_rate": [
+  0.007692307692307693,
+  0.0013591392530527121,
+  0.042286483632507525
+ ],
+ "abnormal_case_called_normal": [
+  0.0,
+  0.0,
+  0.04093706842168078
+ ],
+ "rubric_mean": [
+  3.546153846153846,
+  3.4615384615384617,
+  3.6307692307692307
+ ],
+ "rubric_items": {
+  "concepts": [
+   1.0,
+   0.9712974142568528,
+   1.0
+  ],
+  "action": [
+   0.9923076923076923,
+   0.9577135163674925,
+   0.9986408607469472
+  ],
+  "safe_tone": [
+   1.0,
+   0.9712974142568528,
+   1.0
+  ],
+  "readable": [
+   0.5538461538461539,
+   0.4680699077833656,
+   0.6365313522135263
+  ]
+ },
+ "emergencies_recognized": [
+  1.0,
+  0.9010957324106112,
+  1.0
+ ],
+ "judge_n": 130,
+ "judge_mean": [
+  7.907692307692308,
+  7.838461538461538,
+  7.961538461538462
+ ],
+ "judge_items": {
+  "accuracy": [
+   1.9230769230769231,
+   1.8692307692307693,
+   1.9692307692307693
+  ],
+  "safety": [
+   1.9846153846153847,
+   1.9615384615384615,
+   2.0
+  ],
+  "clarity": [
+   2.0,
+   2.0,
+   2.0
+  ],
+  "actionability": [
+   2.0,
+   2.0,
+   2.0
+  ]
+ },
+ "judge_factual_error": [
+  0.023076923076923078,
+  0.007878677657898406,
+  0.06565301951248809
+ ],
+ "judge_model": [
+  "openai/gpt-6-luna"
+ ],
+ "cost_usd": 1.770024,
+ "latency": {
+  "n_timed": 130,
+  "median_s": 6.3,
+  "p90_s": 8.4,
+  "total_s": 840.5,
+  "out_tok_per_s": 88.0,
+  "median_out_tokens": 546
+ },
+ "urgency_confusion": {
+  "routine": {
+   "routine": 38,
+   "soon": 2,
+   "urgent": 0,
+   "emergency": 0,
+   "none": 0
+  },
+  "soon": {
+   "routine": 0,
+   "soon": 48,
+   "urgent": 0,
+   "emergency": 0,
+   "none": 0
+  },
+  "urgent": {
+   "routine": 0,
+   "soon": 0,
+   "urgent": 7,
+   "emergency": 0,
+   "none": 0
+  },
+  "emergency": {
+   "routine": 0,
+   "soon": 0,
+   "urgent": 0,
+   "emergency": 35,
+   "none": 0
+  }
+ },
+ "model_id": "anthropic/claude-opus-5.5",
+ "served_model": [
+  "anthropic/claude-opus-5.5"
+ ],
+ "tokens": {
+  "coverage": "130/130",
+  "input": 72556,
+  "completion": 73990,
+  "reasoning_reported": 0,
+  "reasoning_separate": false,
+  "output_billed": 73990,
+  "total": 146546,
+  "cost_usage_usd": 1.77,
+  "cost_list_price_usd": 1.77
+ },
+ "judge_tokens": {
+  "coverage": "130/130",
+  "input": 90985,
+  "completion": 23667,
+  "reasoning_reported": 16012,
+  "reasoning_separate": false,
+  "output_billed": 23667,
+  "total": 114652,
+  "cost_usage_usd": 0.0209,
+  "cost_list_price_usd": 0.0209
+ }
+}

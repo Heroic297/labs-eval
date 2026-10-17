@@ -1,0 +1,14 @@
+# copyrighted source documents: kept locally for audit, never redistributed
+sources/*.pdf
+sources/abim.txt
+# local / incomplete / personal
+x_thread_draft.md
+results/partial_incomplete/
+# run artifacts
+*.log
+results/**/*.log
+results/*DONE
+results/smoke/DONE
+__pycache__/
+*.pyc
+.env
